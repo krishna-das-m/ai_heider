@@ -1,0 +1,25 @@
+The user's trust and distrust information is included in this dataset; users evaluate other users based on the quality of their reviews on the item. The dataset contains three following files:
+
+1- user_rating.txt.gz  
+Column Details: 
+    1. MY_ID This stores Id of the member who is making the trust/distrust statement 
+    2. OTHER_ID The other ID is the ID of the member being trusted/distrusted 
+    3. VALUE Value = 1 for trust and -1 for distrust 
+    4. CREATION It is the date on which the trust was made 
+       
+2- mc.txt.gz 
+Column Details: 
+    1. CONTENT_ID The object ID of the article; each article is written by a user.
+    2. AUTHOR_ID The ID of the user who wrote the article 
+    3. SUBJECT_ID The ID of the subject that the article is supposed to be about 
+       
+3- rating.txt  
+Column Details:
+    1. OBJECT_ID The object ID is the object that is being rated. The only valid objects at the present time are the content_id of the member_content table. This means that at present this table only stores the ratings on reviews and essays 
+    2. MEMBER_ID Stores the id of the member who is rating the object 
+    3. RATING Stores the 1-5 (1- Not helpful , 2 - Somewhat Helpful, 3 - Helpful 4 - Very Helpful 5- Most Helpful) rating of the object by member [There are some 6s, treat them as 5] 
+    4. STATUS The display status of the rating. 1 :- means the member has chosen not to show his rating of the object and 0 meaning the member does not mind showing his name beside the rating. 
+    5. CREATION The date on which the member first rated this object 
+    6. LAST_MODIFIED The latest date on which the member modified his rating of the object 
+    7. TYPE If and when we allow more than just content rating to be stored in this table, then this column would store the type of the object being rated. 
+    8. VERTICAL_ID Vertical_id of the review. 
